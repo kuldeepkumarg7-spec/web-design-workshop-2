@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quit Game</title>
+    <style>
+        /* Base Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: "Arial Narrow", Arial, sans-serif; 
+            overflow: hidden; 
+        }
+
+        /* Full Screen Background */
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Overlay to dim the background slightly */
+        .modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* The Quit Confirmation Box */
+        .quit-box {
+            background-color: rgba(0, 0, 0, 0.85);
+            border-top: 10px solid #3b6082; /* Matches the blue bar from settings */
+            padding: 35px 50px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.8);
+        }
+
+        /* Quit Text */
+        .quit-text {
+            color: #ffffff;
+            font-size: 2rem;
+            margin: 0 0 30px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        /* Button Container */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        /* Link Buttons */
+        .btn {
+            display: block;
+            background-color: rgba(30, 30, 30, 0.9);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            transition: background-color 0.1s, color 0.1s;
+        }
+
+        /* Hover states for the buttons */
+        .btn:hover {
+            background-color: #f4f4f4;
+            color: #000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="/used img, vdo/MAIN_MENU.png" class="bg-image" alt="Background">
+
+    <div class="modal-overlay">
+        <div class="quit-box">
+            <h2 class="quit-text">Are you sure to quit?</h2>
+            
+            <div class="button-container">
+                <a href="/index.html" class="btn">YES</a>
+                
+                <a href="/006.html" class="btn">NO</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

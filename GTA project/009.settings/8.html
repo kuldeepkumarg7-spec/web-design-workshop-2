@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Menu</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: "Arial Narrow", Arial, sans-serif; 
+            overflow: hidden; 
+            background-color: #111; /* Fallback background */
+        }
+
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Main Wrapper */
+        .settings-wrapper {
+            position: absolute;
+            top: 8%;
+            left: 5%;
+            width: 85%;
+            max-width: 1100px;
+        }
+
+        .menu-title {
+            font-size: 3.5rem;
+            color: white;
+            margin: 0 0 5px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            font-weight: normal;
+        }
+
+        /* Top Blue Bar */
+        .blue-bar {
+            background-color: #3b6082; 
+            height: 34px;
+            width: 100%;
+            margin-bottom: 4px;
+        }
+
+        /* Layout for Left Menu and Right Pane */
+        .main-content {
+            display: flex;
+            gap: 4px; /* Small gap between left list and right pane */
+            height: 60vh;
+        }
+
+        /* Left Side Menu List */
+        .menu-list {
+            display: flex;
+            flex-direction: column;
+            width: 320px;
+            gap: 2px;
+        }
+
+        .menu-item {
+            background-color: rgba(0, 0, 0, 0.85);
+            color: #ffffff;
+            border: none;
+            text-align: left;
+            padding: 10px 15px;
+            font-size: 1.15rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .menu-item:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .menu-item.active {
+            background-color: #f4f4f4;
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* Right Side Details Pane */
+        .details-pane {
+            flex-grow: 1;
+            background-color: rgba(0, 0, 0, 0.5); /* Translucent background */
+            padding: 10px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        /* Row for individual settings */
+        .setting-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #e0e0e0;
+            font-size: 1.15rem;
+            padding: 6px 0;
+        }
+
+        .setting-row:hover {
+            color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.05); /* Subtle highlight */
+        }
+
+        .setting-value {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Custom Toggle Switch to match image */
+        .custom-toggle {
+            width: 38px;
+            height: 14px;
+            background-color: #333;
+            position: relative;
+        }
+
+        .toggle-handle {
+            width: 19px;
+            height: 14px;
+            background-color: white;
+            position: absolute;
+        }
+
+        /* Positions for the white handle */
+        .toggle-on .toggle-handle { right: 0; }
+        .toggle-off .toggle-handle { left: 0; }
+
+    </style>
+</head>
+<body>
+
+    <img src="/used img, vdo/MAIN_MENU.png" class="bg-image" alt="Background">
+
+    <div class="settings-wrapper">
+        <h1 class="menu-title">Settings</h1>
+        <div class="blue-bar"></div>
+        
+        <div class="main-content">
+            <div class="menu-list">
+              <a href="/009.settings/2.html"><button class="menu-item">GAMEPAD</button></a>
+   <a href="/009.settings/3.html"> <button class="menu-item" >KEYBOARD/MOUSE</button></a>
+   <a href="/009.settings/4.html"> <button class="menu-item">AUDIO</button></a>
+   <a href="/009.settings/5.html"> <button class="menu-item" >CAMERA</button></a>
+   <a href="/009.settings/6.html"> <button class="menu-item" >DISPLAY</button></a>
+   <a href="/009.settings/7.html"> <button class="menu-item" >GRAPHICS</button></a>
+   <a href="/009.settings/8.html"> <button class="menu-item" >ONLINE</button></a>
+   <a href="/009.settings/9.html"> <button class="menu-item" >SAVING & STARTUP</button></a>
+    
+   <a href="/006.html"> <button class="menu-item" >BACK</button></a>   </div>
+
+            <div class="details-pane">
+                <div class="setting-row">
+                    <span>Matchmaking</span>
+                    <span class="setting-value">Open</span>
+                </div>
+                
+                <div class="setting-row">
+                    <span>Voice Chat</span>
+                    <div class="setting-value">
+                        <div class="custom-toggle toggle-on"><div class="toggle-handle"></div></div>
+                        <span>Enabled</span>
+                    </div>
+                </div>
+
+                <div class="setting-row">
+                    <span>Player Overhead Display</span>
+                    <span class="setting-value">Name & Crew Tag</span>
+                </div>
+
+                <div class="setting-row">
+                    <span>Phone Alerts</span>
+                    <div class="setting-value">
+                        <div class="custom-toggle toggle-on"><div class="toggle-handle"></div></div>
+                        <span>On</span>
+                    </div>
+                </div>
+
+                <div class="setting-row">
+                    <span>Job Invites</span>
+                    <div class="setting-value">
+                        <div class="custom-toggle toggle-on"><div class="toggle-handle"></div></div>
+                        <span>All</span>
+                    </div>
+                </div>
+
+                <div class="setting-row" style="margin-top: 10px;">
+                    <span>Restore Defaults</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

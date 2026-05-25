@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Menu - Audio</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: "Arial Narrow", Arial, sans-serif; 
+            overflow: hidden; 
+        }
+
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .settings-wrapper {
+            position: absolute;
+            top: 8%;
+            left: 5%;
+            width: 850px; 
+        }
+
+        .menu-title {
+            color: white;
+            font-size: 3.5rem;
+            margin: 0 0 5px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
+        }
+
+        .blue-bar {
+            background-color: #3b6082; 
+            height: 35px;
+            width: 100%;
+            margin-bottom: 2px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: rgba(255,255,255,0.3);
+            font-size: 0.8rem;
+            padding: 0 5px;
+            box-sizing: border-box;
+        }
+
+        .content-area {
+            display: flex;
+            height: 480px; 
+        }
+
+        /* Left Menu */
+        .menu-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            background-color: #000;
+            width: 280px;
+            flex-shrink: 0;
+        }
+
+        .menu-item {
+            background-color: rgba(0, 0, 0, 0.85);
+            color: #ffffff;
+            text-align: left;
+            padding: 10px 15px;
+            font-size: 1.15rem;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-family: inherit;
+        }
+
+        .menu-item:hover, .menu-item.active {
+            background-color: #f4f4f4;
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* Right Panel */
+        .right-panel {
+            flex-grow: 1;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 10px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 1.1rem;
+            height: 24px;
+        }
+
+        /* Custom group to hold text values next to sliders */
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .value-text {
+            font-size: 1.1rem;
+            min-width: 40px;
+            text-align: right;
+        }
+
+        /* Controls: Toggles and Sliders */
+        .toggle-switch {
+            display: flex;
+            width: 40px;
+            height: 16px;
+        }
+        .toggle-switch .left { width: 50%; background-color: #fff; }
+        .toggle-switch .right { width: 50%; background-color: #555; }
+
+        .slider-container {
+            width: 140px;
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.3);
+            display: flex;
+            align-items: center;
+        }
+        
+        .slider-fill {
+            height: 100%;
+            background-color: #5d8ebf;
+        }
+
+        /* Bottom indicator */
+        .scroll-indicator {
+            margin-top: auto;
+            text-align: center;
+            width: 100%;
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="/used img, vdo/MAIN_MENU.png" class="bg-image" alt="Background">
+
+    <div class="settings-wrapper">
+        <h1 class="menu-title">Settings</h1>
+        <div class="blue-bar">
+            <span>&lt;</span>
+            <span>&gt;</span>
+        </div>
+        
+        <div class="content-area">
+            <div class="menu-list">
+                <a href="/009.settings/2.html"><button class="menu-item">GAMEPAD</button></a>
+   <a href="/009.settings/3.html"> <button class="menu-item" >KEYBOARD/MOUSE</button></a>
+   <a href="/009.settings/4.html"> <button class="menu-item">AUDIO</button></a>
+   <a href="/009.settings/5.html"> <button class="menu-item" >CAMERA</button></a>
+   <a href="/009.settings/6.html"> <button class="menu-item" >DISPLAY</button></a>
+   <a href="/009.settings/7.html"> <button class="menu-item" >GRAPHICS</button></a>
+   <a href="/009.settings/8.html"> <button class="menu-item" >ONLINE</button></a>
+   <a href="/009.settings/9.html"> <button class="menu-item" >SAVING & STARTUP</button></a>
+    
+   <a href="/006.html"> <button class="menu-item" >BACK</button></a>   </div>
+
+            <div class="right-panel">
+                <div class="detail-row">
+                    <span>SFX Volume</span>
+                    <div class="control-group">
+                        <span class="value-text">100%</span>
+                        <div class="slider-container"><div class="slider-fill" style="width: 85%;"></div></div>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span>Music Volume</span>
+                    <div class="control-group">
+                        <span class="value-text">100%</span>
+                        <div class="slider-container"><div class="slider-fill" style="width: 80%;"></div></div>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span>Dialogue Boost</span>
+                    <div class="control-group">
+                        <span class="value-text">0%</span>
+                        <div class="slider-container"><div class="slider-fill" style="width: 30%;"></div></div>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span>Radio Station</span>
+                    <span>Goodn</span>
+                </div>
+                <div class="detail-row">
+                    <span>Self Radio Mode</span>
+                    <span>Self Radio</span>
+                </div>
+                <div class="detail-row">
+                    <span>Auto-Scan for Music</span>
+                    <div class="toggle-switch"><div class="left"></div><div class="right"></div></div>
+                </div>
+                <div class="detail-row">
+                    <span>Restore Defaults</span>
+                    <span></span>
+                </div>
+                <div class="scroll-indicator">v</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

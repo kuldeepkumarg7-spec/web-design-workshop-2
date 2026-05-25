@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Image</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            /* Flexbox to center contents */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            /* Prevents the link tag from interfering with image dimensions */
+            display: flex; 
+        }
+
+        img {
+            max-width: 100vw;
+            max-height: 100vh;
+            object-fit: contain;
+        }
+    </style>
+
+</head>
+<body>
+    <a href="/004.logos.html">
+        <img src="https://i.ibb.co/nMbLkY4w/Gemini-Generated-Image-itxa4eitxa4eitxa.png" alt="Gemini-Generated-Image-itxa4eitxa4eitxa" border="0">
+    </a>
+</body>
+</html>

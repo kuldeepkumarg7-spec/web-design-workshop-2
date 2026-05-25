@@ -1,0 +1,104 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Calculator</title>
+    <script>
+        function g() {
+            let s = parseInt(document.getElementById("subjects").value);            
+            if (isNaN(s) || s <= 0) {
+                alert("Please enter a valid number of subjects.");
+                return;
+            }
+            let t = 0;
+            for(let i = 1; i <= s; i++) {
+                let m = parseFloat(prompt("Enter marks for subject " + i));                
+                if (isNaN(m)) {
+                    alert("Invalid marks entered. Cancelling calculation.");
+                    return;
+                }                
+                t += m;
+            }            
+            let p = (t / (s * 100)) * 100;             
+            document.getElementById("total").innerHTML = "Total Marks: " + t;
+            document.getElementById("percentage").innerHTML = "Percentage: " + p.toFixed(2) + "%"; 
+            document.getElementById("result").innerHTML = "Result: " + (p >= 40 ? "Pass" : "Fail");
+        }
+    </script>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; margin-top: 50px; }
+        .card { padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
+        input, button { padding: 10px; margin: 10px 0; }
+        button { background-color: blue; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2 class="head">Student Result Calculator</h2>
+        <label for="subjects">Enter number of subjects:</label>
+        <br>
+        <input type="number" id="subjects" placeholder="Number of subjects" min="1">
+        <br>
+        <button onclick="g()">Calculate</button>
+        <div class="result">
+            <p id="total"></p>
+            <p id="percentage"></p>
+            <p id="result"></p>
+        </div>
+    </div>
+</body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Calculator</title>
+    <script>
+        function g() {
+            let s = parseInt(document.getElementById("subjects").value);            
+            if (isNaN(s) || s <= 0) {
+                alert("Please enter a valid number of subjects.");
+                return;
+            }
+            let t = 0;
+            for(let i = 1; i <= s; i++) {
+                let m = parseFloat(prompt("Enter marks for subject " + i));                
+                if (isNaN(m)) {
+                    alert("Invalid marks entered. Cancelling calculation.");
+                    return;
+                }                
+                t += m;
+            }            
+            let p = (t / (s * 100)) * 100;             
+            document.getElementById("total").innerHTML = "Total Marks: " + t;
+            document.getElementById("percentage").innerHTML = "Percentage: " + p.toFixed(2) + "%"; 
+            document.getElementById("result").innerHTML = "Result: " + (p >= 40 ? "Pass" : "Fail");
+        }
+    </script>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; margin-top: 50px; }
+        .card { padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
+        input, button { padding: 10px; margin: 10px 0; }
+        button { background-color: blue; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2 class="head">Student Result Calculator</h2>
+        <label for="subjects">Enter number of subjects:</label>
+        <br>
+        <input type="number" id="subjects" placeholder="Number of subjects" min="1">
+        <br>
+        <button onclick="g()">Calculate</button>
+        <div class="result">
+            <p id="total"></p>
+            <p id="percentage"></p>
+            <p id="result"></p>
+        </div>
+    </div>
+</body>
+>>>>>>> 82a416f5ce565fc8a16d69d7e8ecd08edd5e6b8c
+</html>
