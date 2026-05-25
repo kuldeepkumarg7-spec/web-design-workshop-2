@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            color:black;
+            font-size: 30px;
+        }
+        input, button{
+            padding:10px;
+            font-size:16px;
+
+        }
+        #output{
+            margin:20px;
+            font-size:18px;
+            color:#333;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function gp() {
+            let n=parseInt(document.getElementById('num').value);
+            let r="";
+            for(let i=1;i<=n;i++){
+                for(let j=1;j<=i;j++){
+                    r+=j+" ";
+                }
+                r+="<br>";
+            }
+            document.getElementById('output').innerHTML=r;
+ 
+        }
+    </script>
+    <h2>NUMBER PATTERN</h2>
+    <label>enter a no.</lable>
+    <input type="number" id="num">
+    <button onclick="gp()">generate</button>
+    <div id="output"></div>
+</body>
+</html>
